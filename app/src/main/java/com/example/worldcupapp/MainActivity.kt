@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         // adapter
         val arrayAdapter: ArrayAdapter<*> = ArrayAdapter(
             this,
-            android.R.layout.simple_list_item_1,
+            R.layout.list_item,
+            R.id.nameCountry,
             countries
         )
 
