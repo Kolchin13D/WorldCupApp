@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 class ItemAdapter(private var activity: Activity, private var items: ArrayList<CountryModel>) :
     BaseAdapter() {
@@ -43,8 +44,12 @@ class ItemAdapter(private var activity: Activity, private var items: ArrayList<C
         viewHolder.textWins?.text = countries.wins
         viewHolder.image?.setImageResource(countries.flagImg)
 
-        view?.setOnClickListener(){
-
+        view?.setOnClickListener() {
+            Toast.makeText(
+                activity,
+                "You clicked ${countries.name}",
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
         return view as View
